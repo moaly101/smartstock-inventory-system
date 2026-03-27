@@ -18,4 +18,5 @@ public class ProductWebController {
         model.addAttribute("products", productService.getAllProducts());
         return "inventory"; // Sucht nach inventory.html in templates
     }
+
 }

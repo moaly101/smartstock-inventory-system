@@ -23,4 +23,9 @@ class ProductWebControllerTest {
                 .andExpect(status().isOk()) // Prüft, ob kein 500er Fehler kommt
                 .andExpect(view().name("inventory")); // Prüft, ob er die Datei "inventory.html" sucht
     }
+    @Test
+    void swaggerUiPageShouldBeAccessible() throws Exception {
+        mockMvc.perform(get("/v3/api-docs"))
+                .andExpect(status().isOk());
+    }
 }
