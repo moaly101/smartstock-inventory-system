@@ -17,7 +17,7 @@ public class Product {
 
     // Eine kleine "smarte" Methode für die Logik
     public boolean needsRestock() {
-        return false;
+        return this.stock < this.minThreshold;
     }
     
     
