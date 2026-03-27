@@ -15,8 +15,7 @@ public class ProductWebController {
 
     @GetMapping("/inventory")
     public String getInventory(Model model) {
-        // TDD RED: Wir geben "wrong-view" zurück.
-        // Der Test erwartet aber "inventory", also wird er fehlschlagen.
-        return "wrong-view";
+        model.addAttribute("products", productService.getAllProducts());
+        return "inventory"; // Sucht nach inventory.html in templates
     }
 }
