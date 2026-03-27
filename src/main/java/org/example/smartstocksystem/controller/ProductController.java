@@ -13,22 +13,20 @@ import java.util.List;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    private final ProductRepository productRepository;
     private final ProductService productService;
 
-    public ProductController(ProductService productService, ProductRepository productRepository) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
-        this.productRepository = productRepository;
     }
     @GetMapping
     public List<Product> getAllProducts() {
-        return productRepository.findAll();
+        return productService.getAllProducts();
     }
 
     // 2. Ein neues Produkt anlegen (POST)
     @PostMapping
     public Product createProduct(@RequestBody Product product) {
-        return productRepository.save(product);
+        return productService.createProduct(product);
     }
 
     // 3. Bestand aktualisieren (PUT)
