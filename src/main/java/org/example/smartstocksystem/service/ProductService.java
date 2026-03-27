@@ -16,8 +16,12 @@ public class ProductService {
         Product product = productRepository.findById(productId)
                 .orElseThrow(() -> new RuntimeException("Produkt nicht gefunden"));
 
-        // TDD RED: Wir tun hier NICHTS mit dem Bestand.
-        // Der Test, der erwartet, dass der Bestand um 'amount' steigt, wird fehlschlagen.
+        product.setStock(product.getStock() + amount);
+
+        // Logik-Check:
+        if (product.getStock() < product.getMinThreshold()) {
+            System.out.println("WARNUNG: " + product.getName() + " muss nachbestellt werden!");
+        }
 
         return productRepository.save(product);
     }
