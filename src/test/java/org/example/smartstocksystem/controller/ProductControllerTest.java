@@ -1,12 +1,15 @@
 package org.example.smartstocksystem.controller;
 
+import jakarta.transaction.Transactional;
 import org.example.smartstocksystem.model.Product;
 import org.example.smartstocksystem.repository.ProductRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -15,6 +18,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest // Lädt den gesamten Spring-Kontext
 @AutoConfigureMockMvc // Konfiguriert das MockMvc-Tool
+@ActiveProfiles("test") // Aktiviert application-test.properties
+@Transactional
 class ProductControllerTest {
 
     @Autowired
@@ -22,6 +27,11 @@ class ProductControllerTest {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @BeforeEach
+    void setUp() {
+        productRepository.deleteAll();
+    }
 
     @Test
     void shouldGetAllProducts() throws Exception {
