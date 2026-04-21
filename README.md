@@ -18,8 +18,12 @@ Ein modernes Lagerverwaltungssystem mit automatisierten Schwellenwert-Warnungen.
 
 ##  Architektur & Qualität
 
-Dieses Projekt folgt der **Layered Architecture** (Controller → Service → Repository) und legt großen Wert auf Softwarequalität durch **TDD (Red-Green-Refactor)**:
+Dieses Projekt folgt der **Layered Architecture** (Controller → Service → Repository) und legt großen Wert auf Softwarequalität durch **TDD (Red-Green-Refactor)**:  
 
+
+* **Entities:** Repräsentieren das Datenbankschema (JPA/Hibernate).
+* **DTOs (Data Transfer Objects):** Werden für die Kommunikation über die REST-API verwendet. Dies entkoppelt die API-Schnittstelle von der internen Datenbankstruktur und verhindert die ungewollte Exponierung interner Felder.
+* **Services:** Enthalten die Geschäftslogik (z. B. Bestandsberechnungen und Schwellenwert-Prüfungen).
 - **Unit Tests:** Vollständige Absicherung der Geschäftslogik im Service-Layer (`ProductServiceTest`).
 - **Integration Tests:** Validierung der REST-Schnittstellen und View-Controller mittels `MockMvc` (`ProductControllerTest`).
 - **Clean Code:** Strikte Trennung von Belangen (Separation of Concerns) und sauberes Dependency Management.
