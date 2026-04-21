@@ -120,3 +120,8 @@
 2026-04-21T17:42:23.126+02:00  INFO 26248 --- [smartstock-system] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
 2026-04-21T17:43:01.960+02:00  WARN 26248 --- [smartstock-system] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.example.smartstocksystem.exception.ProductNotFoundException: Produkt mit ID 1 wurde nicht gefunden.]
 2026-04-21T17:43:19.613+02:00  WARN 26248 --- [smartstock-system] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.example.smartstocksystem.exception.ProductNotFoundException: Produkt mit ID 1 wurde nicht gefunden.]
+2026-04-21T18:04:14.825+02:00  INFO 26248 --- [smartstock-system] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-21T18:04:14.850+02:00  INFO 26248 --- [smartstock-system] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-21T18:04:14.865+02:00  INFO 26248 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T18:04:14.883+02:00  INFO 26248 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21T18:04:14.884+02:00  INFO 26248 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
