@@ -1,6 +1,5 @@
 package org.example.smartstocksystem.controller;
 
-import org.example.smartstocksystem.repository.ProductRepository;
 import org.example.smartstocksystem.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

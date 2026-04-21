@@ -1,11 +1,16 @@
 package org.example.smartstocksystem.service;
 
+import lombok.extern.slf4j.Slf4j;
+import org.example.smartstocksystem.dto.ProductDTO;
+import org.example.smartstocksystem.exception.ProductNotFoundException;
 import org.example.smartstocksystem.model.Product;
 import org.example.smartstocksystem.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 
+@Slf4j
 @Service
 public class ProductService {
     private final ProductRepository productRepository;
@@ -19,21 +24,20 @@ public class ProductService {
     }
 
     // Neu: Ein Produkt erstellen
-    public Product createProduct(Product product) {
+    public Product createProduct(ProductDTO dto) {
+        Product product = new Product();
+        product.setName(dto.getName());
+        product.setStock(dto.getStock());
+        product.setMinThreshold(dto.getMinThreshold());
         return productRepository.save(product);
     }
 
     public Product updateStock(Long productId, int amount) {
-        Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Produkt nicht gefunden"));
-
-        product.setStock(product.getStock() + amount);
-
-        // Logik-Check:
-        if (product.getStock() < product.getMinThreshold()) {
-            System.out.println("WARNUNG: " + product.getName() + " muss nachbestellt werden!");
-        }
-
-        return productRepository.save(product);
+        return productRepository.findById(productId)
+                .map(product -> {
+                    product.setStock(product.getStock() + amount);
+                    return productRepository.save(product);
+                })
+                .orElseThrow(() -> new ProductNotFoundException(productId));
     }
 }

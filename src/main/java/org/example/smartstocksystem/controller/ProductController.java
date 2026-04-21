@@ -1,6 +1,7 @@
 package org.example.smartstocksystem.controller;
 
 import jakarta.validation.Valid;
+import org.example.smartstocksystem.dto.ProductDTO;
 import org.example.smartstocksystem.model.Product;
 import org.example.smartstocksystem.repository.ProductRepository;
 import org.example.smartstocksystem.service.ProductService;
@@ -26,14 +27,16 @@ public class ProductController {
 
     // 2. Ein neues Produkt anlegen (POST)
     @PostMapping
-    public Product createProduct(@Valid @RequestBody Product product) {
-        return productService.createProduct(product);
+    public ResponseEntity<ProductDTO> createProduct(@Valid @RequestBody ProductDTO dto) {
+        Product savedProduct = productService.createProduct(dto);
+        return ResponseEntity.status(201).body(ProductDTO.fromEntity(savedProduct));
     }
 
     // 3. Bestand aktualisieren (PUT)
     @PutMapping("/{id}/stock")
-    public Product updateStock(@PathVariable Long id, @RequestParam int amount) {
-        return productService.updateStock(id, amount);
+    public ProductDTO updateStock(@PathVariable Long id, @RequestParam int amount) {
+        Product product = productService.updateStock(id, amount);
+        return ProductDTO.fromEntity(product);
     }
 
     // 4. Nur kritische Bestände anzeigen (GET)
