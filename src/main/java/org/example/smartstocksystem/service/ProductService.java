@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -20,7 +21,7 @@ public class ProductService {
     }
 
     public List<Product> getAllProducts() {
-        return productRepository.findAll();
+        return productRepository.findAll().stream().filter(product -> !product.needsRestock()).collect(Collectors.toList());
     }
 
     // Neu: Ein Produkt erstellen
@@ -39,5 +40,8 @@ public class ProductService {
                     return productRepository.save(product);
                 })
                 .orElseThrow(() -> new ProductNotFoundException(productId));
+    }
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
     }
 }
