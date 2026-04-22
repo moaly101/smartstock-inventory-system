@@ -9,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -33,6 +35,8 @@ class ProductControllerTest {
         productRepository.deleteAll();
     }
 
+
+
     @Test
     void shouldGetAllProducts() throws Exception {
         // 1. Arrange: Ein Test-Produkt in die Datenbank speichern
@@ -45,6 +49,7 @@ class ProductControllerTest {
         // 2. Act & Assert: Den Endpunkt aufrufen und prüfen
         // Ersetze APPLICATION_BITSTREAM durch APPLICATION_JSON
         mockMvc.perform(get("/api/products")
+                        .with(user("testadmin").roles("ADMIN"))
                         .contentType(MediaType.APPLICATION_JSON)) // <- Hier korrigieren
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("Test-Hose")); // Prüfe, ob der Name im JSON stimmt
