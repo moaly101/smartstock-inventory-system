@@ -61,6 +61,4 @@ public class Product {
     public void setMinThreshold(int minThreshold) {
         this.minThreshold = minThreshold;
     }
-
-
 }
