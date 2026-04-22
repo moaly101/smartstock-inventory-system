@@ -1009,3 +1009,8 @@ Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "d"
 2026-04-22T14:24:44.316+02:00  INFO 92064 --- [smartstock-system] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-04-22T14:24:44.318+02:00  INFO 92064 --- [smartstock-system] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-04-22T14:24:44.323+02:00  INFO 92064 --- [smartstock-system] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-04-22T14:39:37.962+02:00  INFO 92064 --- [smartstock-system] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-22T14:39:37.978+02:00  INFO 92064 --- [smartstock-system] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-22T14:39:37.984+02:00  INFO 92064 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-22T14:39:37.990+02:00  INFO 92064 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-22T14:39:37.992+02:00  INFO 92064 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
