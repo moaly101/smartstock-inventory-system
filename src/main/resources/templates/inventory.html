@@ -6,6 +6,14 @@
 </head>
 <body class="container mt-5">
 <h2 class="mb-4">SmartStock Inventar</h2>
+<nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="#">📦 SmartStock System</a>
+        <form th:action="@{/auth/logout}" method="post" class="d-flex">
+            <button class="btn btn-outline-light btn-sm" type="submit">logout</button>
+        </form>
+    </div>
+</nav>
 <table class="table table-striped">
     <thead class="table-dark">
     <tr>
