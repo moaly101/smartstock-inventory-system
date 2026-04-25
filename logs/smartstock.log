@@ -2781,3 +2781,114 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2026-04-22T17:31:13.295+02:00  INFO 3843 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-22T17:31:13.296+02:00  INFO 3843 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-04-22T17:31:13.298+02:00  INFO 3843 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-25T13:44:13.501+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : Starting SmartstockSystemApplication using Java 21.0.1 with PID 18117 (/Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system/build/classes/java/main started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T13:44:13.502+02:00 DEBUG 18117 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T13:44:13.503+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-04-25T13:44:13.527+02:00  INFO 18117 --- [smartstock-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-25T13:44:13.527+02:00  INFO 18117 --- [smartstock-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-25T13:44:13.949+02:00  INFO 18117 --- [smartstock-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-25T13:44:13.983+02:00  INFO 18117 --- [smartstock-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2026-04-25T13:44:14.330+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-25T13:44:14.339+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-25T13:44:14.339+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-25T13:44:14.359+02:00  INFO 18117 --- [smartstock-system] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 831 ms
+2026-04-25T13:44:14.448+02:00  INFO 18117 --- [smartstock-system] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-25T13:44:14.487+02:00  INFO 18117 --- [smartstock-system] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-25T13:44:14.764+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-25T13:44:14.783+02:00  INFO 18117 --- [smartstock-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-25T13:44:14.925+02:00  INFO 18117 --- [smartstock-system] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@37300ff3
+2026-04-25T13:44:14.926+02:00  INFO 18117 --- [smartstock-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-25T13:44:14.972+02:00  INFO 18117 --- [smartstock-system] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartstock]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: smartstock/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-25T13:44:15.537+02:00  INFO 18117 --- [smartstock-system] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-25T13:44:15.593+02:00  WARN 18117 --- [smartstock-system] [restartedMain] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-04-25T13:44:15.593+02:00  WARN 18117 --- [smartstock-system] [restartedMain] org.hibernate.orm.jdbc.warn              : constraint "ukr43af9ap4edm43mmtq01oddj6" of relation "users" does not exist, skipping
+2026-04-25T13:44:15.599+02:00  INFO 18117 --- [smartstock-system] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T13:44:15.656+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-25T13:44:15.777+02:00 DEBUG 18117 --- [smartstock-system] [restartedMain] o.e.s.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-25T13:44:15.853+02:00  INFO 18117 --- [smartstock-system] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-04-25T13:44:15.976+02:00  INFO 18117 --- [smartstock-system] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/smartstock (PostgreSQL 15.17)
+2026-04-25T13:44:16.006+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2026-04-25T13:44:16.009+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.011s)
+2026-04-25T13:44:16.021+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" with baseline ...
+2026-04-25T13:44:16.044+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbBaseline     : Successfully baselined schema with version: 1
+2026-04-25T13:44:16.061+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+2026-04-25T13:44:16.066+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - insert admin user"
+2026-04-25T13:44:16.088+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "3 - create products table"
+2026-04-25T13:44:16.091+02:00  WARN 18117 --- [smartstock-system] [restartedMain] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: relation "products" already exists, skipping (SQL State: 42P07 - Error Code: 0)
+2026-04-25T13:44:16.105+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "4 - insert products table"
+2026-04-25T13:44:16.120+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "public", now at version v4 (execution time 00:00.017s)
+2026-04-25T13:44:16.196+02:00  WARN 18117 --- [smartstock-system] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-25T13:44:16.879+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-25T13:44:16.918+02:00  INFO 18117 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : Started SmartstockSystemApplication in 3.637 seconds (process running for 4.384)
+2026-04-25T13:44:16.923+02:00  WARN 18117 --- [smartstock-system] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-25T13:44:16.924+02:00  WARN 18117 --- [smartstock-system] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-25T13:44:32.696+02:00  INFO 18117 --- [smartstock-system] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-25T13:44:32.697+02:00  INFO 18117 --- [smartstock-system] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-25T13:44:32.707+02:00  INFO 18117 --- [smartstock-system] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2026-04-25T13:45:50.300+02:00  INFO 18117 --- [smartstock-system] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-25T13:45:50.306+02:00  INFO 18117 --- [smartstock-system] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-25T13:45:50.313+02:00  INFO 18117 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T13:45:50.321+02:00  INFO 18117 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-25T13:45:50.323+02:00  INFO 18117 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-25T13:47:10.838+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : Starting SmartstockSystemApplication using Java 21.0.1 with PID 18333 (/Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system/build/classes/java/main started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T13:47:10.847+02:00 DEBUG 18333 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T13:47:10.847+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-04-25T13:47:10.899+02:00  INFO 18333 --- [smartstock-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-25T13:47:10.899+02:00  INFO 18333 --- [smartstock-system] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-25T13:47:11.422+02:00  INFO 18333 --- [smartstock-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-25T13:47:11.445+02:00  INFO 18333 --- [smartstock-system] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2026-04-25T13:47:11.741+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-25T13:47:11.749+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-25T13:47:11.749+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-25T13:47:11.767+02:00  INFO 18333 --- [smartstock-system] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 868 ms
+2026-04-25T13:47:11.846+02:00  INFO 18333 --- [smartstock-system] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-25T13:47:11.885+02:00  INFO 18333 --- [smartstock-system] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-25T13:47:12.139+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-25T13:47:12.159+02:00  INFO 18333 --- [smartstock-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-25T13:47:12.295+02:00  INFO 18333 --- [smartstock-system] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12528542
+2026-04-25T13:47:12.296+02:00  INFO 18333 --- [smartstock-system] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-25T13:47:12.340+02:00  INFO 18333 --- [smartstock-system] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartstock]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: smartstock/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-25T13:47:12.883+02:00  INFO 18333 --- [smartstock-system] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-25T13:47:12.932+02:00  INFO 18333 --- [smartstock-system] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T13:47:12.985+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-25T13:47:13.097+02:00 DEBUG 18333 --- [smartstock-system] [restartedMain] o.e.s.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-25T13:47:13.149+02:00  INFO 18333 --- [smartstock-system] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-04-25T13:47:13.255+02:00  INFO 18333 --- [smartstock-system] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/smartstock (PostgreSQL 15.17)
+2026-04-25T13:47:13.304+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.021s)
+2026-04-25T13:47:13.333+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-04-25T13:47:13.336+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-25T13:47:13.420+02:00  WARN 18333 --- [smartstock-system] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-25T13:47:13.864+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-25T13:47:13.869+02:00  INFO 18333 --- [smartstock-system] [restartedMain] o.e.s.SmartstockSystemApplication        : Started SmartstockSystemApplication in 3.416 seconds (process running for 3.932)
+2026-04-25T13:47:13.870+02:00  WARN 18333 --- [smartstock-system] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-25T13:47:13.871+02:00  WARN 18333 --- [smartstock-system] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-25T13:47:37.447+02:00  INFO 18333 --- [smartstock-system] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-25T13:47:37.448+02:00  INFO 18333 --- [smartstock-system] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-25T13:47:37.452+02:00  INFO 18333 --- [smartstock-system] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-04-25T13:51:48.304+02:00  INFO 18333 --- [smartstock-system] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-25T13:51:48.314+02:00  INFO 18333 --- [smartstock-system] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-25T13:51:48.321+02:00  INFO 18333 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T13:51:48.327+02:00  INFO 18333 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-25T13:51:48.329+02:00  INFO 18333 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

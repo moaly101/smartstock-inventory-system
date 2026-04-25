@@ -40,7 +40,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             jwt = authHeader.substring(7);
         }
 
-        // 2. Dann Cookie prüfen (für Browser-Requests)
+        // 2. Dann Cookie prüfen
         if (jwt == null && request.getCookies() != null) {
             for (Cookie cookie : request.getCookies()) {
                 if ("JWT_TOKEN".equals(cookie.getName())) {
@@ -50,27 +50,39 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             }
         }
 
-        // 3. Kein Token gefunden → weiter
+        // 3. Kein Token gefunden → weiter zum nächsten Filter
         if (jwt == null) {
             filterChain.doFilter(request, response);
             return;
         }
 
-        // 4. User validieren und im SecurityContext setzen
-        String username = jwtService.extractUsername(jwt);
-        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
+        // 4. User validieren mit Fehlerbehandlung für abgelaufene Tokens
+        try {
+            String username = jwtService.extractUsername(jwt);
 
-            if (jwtService.isTokenValid(jwt, userDetails.getUsername())) {
-                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                        userDetails,
-                        null,
-                        userDetails.getAuthorities()
-                );
-                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                SecurityContextHolder.getContext().setAuthentication(authToken);
+            if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
+
+                if (jwtService.isTokenValid(jwt, userDetails.getUsername())) {
+                    UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+                            userDetails,
+                            null,
+                            userDetails.getAuthorities()
+                    );
+                    authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                    SecurityContextHolder.getContext().setAuthentication(authToken);
+                }
             }
+        } catch (io.jsonwebtoken.ExpiredJwtException e) {
+            // Token ist abgelaufen. Wir loggen das (optional) und machen nichts.
+            // Da der SecurityContext nicht gesetzt wurde, ist der User für Spring Security unauthentifiziert.
+            logger.warn("JWT Token abgelaufen: " + e.getMessage());
+        } catch (Exception e) {
+            // Andere JWT-Fehler (falsche Signatur etc.)
+            logger.error("JWT Validierung fehlgeschlagen: " + e.getMessage());
         }
+
+        // WICHTIG: filterChain.doFilter muss immer aufgerufen werden, damit der Request weitergeht
         filterChain.doFilter(request, response);
     }
 }
