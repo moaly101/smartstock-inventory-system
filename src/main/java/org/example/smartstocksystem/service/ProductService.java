@@ -21,7 +21,7 @@ public class ProductService {
     }
 
     public List<Product> getAllProducts() {
-        return productRepository.findAll().stream().filter(product -> !product.needsRestock()).collect(Collectors.toList());
+        return productRepository.findAll().stream().collect(Collectors.toList());
     }
 
     // Neu: Ein Produkt erstellen
