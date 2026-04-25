@@ -1,5 +1,6 @@
 package org.example.smartstocksystem.service;
 
+import org.example.smartstocksystem.dto.ProductDTO;
 import org.example.smartstocksystem.exception.ProductNotFoundException;
 import org.example.smartstocksystem.model.Product;
 import org.example.smartstocksystem.repository.ProductRepository;
@@ -9,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,7 +30,6 @@ public class ProductServiceTest {
     void testUpdateStockIncreasesValue() {
         // Arrange
         Product p = new Product();
-        p.setId(1L);
         p.setStock(10);
 
         // Wir sagen dem Mock: "Wenn jemand nach ID 1 sucht, gib Produkt p zurück"
@@ -71,5 +72,46 @@ public class ProductServiceTest {
         // Assert
         // Der Test stellt aber sicher, dass der Code-Pfad ohne Absturz durchläuft.
         verify(productRepository).save(p);
+    }
+    @Test
+    void testGetAllProducts() {
+        // Arrange
+        List<Product> products = List.of(new Product(), new Product());
+        when(productRepository.findAll()).thenReturn(products);
+
+        // Act
+        List<Product> result = productService.getAllProducts();
+
+        // Assert
+        assertEquals(2, result.size());
+        verify(productRepository).findAll();
+    }
+
+    @Test
+    void testCreateProduct() {
+        // Arrange
+        ProductDTO dto = new ProductDTO();
+        dto.setName("Neu");
+        dto.setStock(5);
+        dto.setMinThreshold(2);
+
+        when(productRepository.save(any(Product.class))).thenAnswer(i -> i.getArguments()[0]);
+
+        // Act
+        Product created = productService.createProduct(dto);
+
+        // Assert
+        assertEquals("Neu", created.getName());
+        assertEquals(5, created.getStock());
+        verify(productRepository).save(any(Product.class));
+    }
+
+    @Test
+    void testDeleteProduct() {
+        // Act
+        productService.deleteProduct(1L);
+
+        // Assert
+        verify(productRepository).deleteById(1L);
     }
 }

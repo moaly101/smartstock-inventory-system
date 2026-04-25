@@ -19,7 +19,6 @@ public class ProductDTO {
     // fromEntity - was der Client zurückbekommt
     public static ProductDTO fromEntity(Product product) {
         ProductDTO dto = new ProductDTO();
-        dto.setId(product.getId());
         dto.setName(product.getName());
         dto.setStock(product.getStock());
         dto.setMinThreshold(product.getMinThreshold());
@@ -28,7 +27,6 @@ public class ProductDTO {
 
     // Getter & Setter
     public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
     public int getStock() { return stock; }
