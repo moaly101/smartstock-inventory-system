@@ -218,11 +218,3 @@ Dieses Projekt folgt der **Layered Architecture** (Controller → Service → Re
 - **Clean Code:** Strikte Trennung von Belangen (Separation of Concerns) und sauberes Dependency Management.
 
 ---
-
-## Bekannte Einschränkungen / To-Do
-
-- [ ] E-Mail-Verifizierung bei der Registrierung
-- [ ] Passwort-Reset-Funktion
-- [ ] Rate Limiting für Login-Endpunkte
-- [ ] Token-Invalidierung (Logout / Blacklisting)
-- [ ] Produktbilder hochladen
