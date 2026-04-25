@@ -7187,3 +7187,204 @@ Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema valid
 2026-04-25T18:09:55.443+02:00  INFO 32371 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-25T18:09:55.445+02:00  INFO 32371 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-04-25T18:09:55.446+02:00  INFO 32371 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-25T18:12:27.667+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.SmartstockSystemApplicationTests   : Starting SmartstockSystemApplicationTests using Java 21.0.1 with PID 32651 (started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T18:12:27.668+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.SmartstockSystemApplicationTests   : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T18:12:27.669+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.SmartstockSystemApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-04-25T18:12:28.080+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-25T18:12:28.106+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2026-04-25T18:12:28.369+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-25T18:12:28.399+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-25T18:12:28.640+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-25T18:12:28.657+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-25T18:12:28.793+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78324e97
+2026-04-25T18:12:28.794+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-25T18:12:28.853+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartstock]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: smartstock/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-25T18:12:29.341+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-25T18:12:29.395+02:00  INFO 32651 --- [smartstock-system] [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:29.444+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-25T18:12:29.558+02:00  INFO 32651 --- [smartstock-system] [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-04-25T18:12:29.664+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/smartstock (PostgreSQL 15.17)
+2026-04-25T18:12:29.722+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.029s)
+2026-04-25T18:12:29.745+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-04-25T18:12:29.749+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-25T18:12:29.821+02:00  WARN 32651 --- [smartstock-system] [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-25T18:12:30.238+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.SmartstockSystemApplicationTests   : Started SmartstockSystemApplicationTests in 2.7 seconds (process running for 3.433)
+2026-04-25T18:12:30.239+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-25T18:12:30.240+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-25T18:12:30.553+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.AdminControllerSecurityTest]: AdminControllerSecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:30.561+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.AdminControllerSecurityTest
+2026-04-25T18:12:30.562+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.AdminControllerSecurityTest]: AdminControllerSecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:30.563+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.AdminControllerSecurityTest
+2026-04-25T18:12:30.577+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.c.AdminControllerSecurityTest      : Starting AdminControllerSecurityTest using Java 21.0.1 with PID 32651 (started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T18:12:30.577+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.c.AdminControllerSecurityTest      : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T18:12:30.577+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.c.AdminControllerSecurityTest      : No active profile set, falling back to 1 default profile: "default"
+2026-04-25T18:12:30.672+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-25T18:12:30.677+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-04-25T18:12:30.727+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-25T18:12:30.737+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-25T18:12:30.737+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-04-25T18:12:30.759+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@43c16e17
+2026-04-25T18:12:30.759+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-04-25T18:12:30.770+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartstock]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: smartstock/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-25T18:12:30.789+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-25T18:12:30.820+02:00  INFO 32651 --- [smartstock-system] [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:30.843+02:00  INFO 32651 --- [smartstock-system] [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-04-25T18:12:30.864+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/smartstock (PostgreSQL 15.17)
+2026-04-25T18:12:30.881+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.005s)
+2026-04-25T18:12:30.893+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-04-25T18:12:30.894+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-25T18:12:30.917+02:00  WARN 32651 --- [smartstock-system] [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-25T18:12:31.035+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-25T18:12:31.036+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-25T18:12:31.036+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-25T18:12:31.037+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-25T18:12:31.045+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.c.AdminControllerSecurityTest      : Started AdminControllerSecurityTest in 0.479 seconds (process running for 4.241)
+2026-04-25T18:12:31.046+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-25T18:12:31.046+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-25T18:12:31.210+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.AuthApiControllerTest]: AuthApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:31.213+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.AuthApiControllerTest
+2026-04-25T18:12:31.213+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.AuthApiControllerTest]: AuthApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:31.214+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.AuthApiControllerTest
+2026-04-25T18:12:31.226+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.controller.AuthApiControllerTest   : Starting AuthApiControllerTest using Java 21.0.1 with PID 32651 (started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T18:12:31.227+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.controller.AuthApiControllerTest   : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T18:12:31.227+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.controller.AuthApiControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-04-25T18:12:31.309+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-25T18:12:31.313+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-04-25T18:12:31.596+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-25T18:12:31.620+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-25T18:12:31.624+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-04-25T18:12:31.732+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@564c0e38
+2026-04-25T18:12:31.732+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-04-25T18:12:31.747+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartstock]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.17
+	Default catalog/schema: smartstock/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-25T18:12:31.776+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-25T18:12:31.823+02:00  INFO 32651 --- [smartstock-system] [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:31.941+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/smartstock (PostgreSQL 15.17)
+2026-04-25T18:12:31.961+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.009s)
+2026-04-25T18:12:31.975+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 4
+2026-04-25T18:12:31.977+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-25T18:12:32.034+02:00  WARN 32651 --- [smartstock-system] [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-25T18:12:32.079+02:00  INFO 32651 --- [smartstock-system] [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-04-25T18:12:32.367+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-25T18:12:32.368+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-25T18:12:32.368+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-25T18:12:32.369+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-25T18:12:32.380+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.controller.AuthApiControllerTest   : Started AuthApiControllerTest in 1.164 seconds (process running for 5.575)
+2026-04-25T18:12:32.381+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-25T18:12:32.381+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-25T18:12:32.434+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.controller.AuthApiController       : Login-Versuch für User: testuser
+2026-04-25T18:12:32.480+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.controller.AuthApiController       : Login-Versuch für User: user
+2026-04-25T18:12:32.484+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.AuthControllerTest]: AuthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:32.487+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.AuthControllerTest
+2026-04-25T18:12:32.487+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.AuthControllerTest]: AuthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:32.489+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.AuthControllerTest
+2026-04-25T18:12:32.518+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:32.520+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.ProductControllerTest
+2026-04-25T18:12:32.520+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:32.521+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.ProductControllerTest
+2026-04-25T18:12:32.544+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.controller.ProductControllerTest   : Starting ProductControllerTest using Java 21.0.1 with PID 32651 (started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T18:12:32.544+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.controller.ProductControllerTest   : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T18:12:32.545+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.controller.ProductControllerTest   : The following 1 profile is active: "test"
+2026-04-25T18:12:32.720+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-25T18:12:32.727+02:00  INFO 32651 --- [smartstock-system] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2026-04-25T18:12:32.803+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-25T18:12:32.817+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-25T18:12:32.818+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-04-25T18:12:32.910+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-04-25T18:12:32.910+02:00  INFO 32651 --- [smartstock-system] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-04-25T18:12:32.915+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-25T18:12:32.946+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-25T18:12:32.947+02:00  INFO 32651 --- [smartstock-system] [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:33.000+02:00  INFO 32651 --- [smartstock-system] [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-04-25T18:12:33.045+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.4)
+2026-04-25T18:12:33.047+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-04-25T18:12:33.053+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-04-25T18:12:33.053+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.002s)
+2026-04-25T18:12:33.058+02:00  INFO 32651 --- [smartstock-system] [Test worker] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-04-25T18:12:33.059+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-04-25T18:12:33.074+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-04-25T18:12:33.078+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create users table"
+2026-04-25T18:12:33.089+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - insert admin user"
+2026-04-25T18:12:33.093+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create products table"
+2026-04-25T18:12:33.100+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - insert products table"
+2026-04-25T18:12:33.106+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.010s)
+2026-04-25T18:12:33.145+02:00  WARN 32651 --- [smartstock-system] [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-25T18:12:33.410+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-25T18:12:33.410+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-25T18:12:33.410+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-25T18:12:33.411+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-25T18:12:33.420+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.controller.ProductControllerTest   : Started ProductControllerTest in 0.896 seconds (process running for 6.615)
+2026-04-25T18:12:33.421+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-25T18:12:33.421+02:00  WARN 32651 --- [smartstock-system] [Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-25T18:12:33.638+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.ProductWebControllerTest]: ProductWebControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:33.646+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.ProductWebControllerTest
+2026-04-25T18:12:33.647+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.ProductWebControllerTest]: ProductWebControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:33.651+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.ProductWebControllerTest
+2026-04-25T18:12:33.667+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.c.ProductWebControllerTest         : Starting ProductWebControllerTest using Java 21.0.1 with PID 32651 (started by mhdyounes in /Users/mhdyounes/Desktop/projeckt/smartstock-inventory-system)
+2026-04-25T18:12:33.667+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.c.ProductWebControllerTest         : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-25T18:12:33.667+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.c.ProductWebControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2026-04-25T18:12:33.800+02:00 DEBUG 32651 --- [smartstock-system] [Test worker] o.e.s.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-04-25T18:12:33.800+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-04-25T18:12:33.800+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-04-25T18:12:33.801+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-04-25T18:12:33.805+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.e.s.c.ProductWebControllerTest         : Started ProductWebControllerTest in 0.152 seconds (process running for 7.0)
+2026-04-25T18:12:33.940+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.SwaggerIntegrationTest]: SwaggerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:33.949+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.SwaggerIntegrationTest
+2026-04-25T18:12:33.951+02:00  INFO 32651 --- [smartstock-system] [Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.example.smartstocksystem.controller.SwaggerIntegrationTest]: SwaggerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-25T18:12:33.957+02:00  INFO 32651 --- [smartstock-system] [Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.example.smartstocksystem.SmartstockSystemApplication for test class org.example.smartstocksystem.controller.SwaggerIntegrationTest
+2026-04-25T18:12:34.214+02:00  INFO 32651 --- [smartstock-system] [Test worker] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 179 ms
+2026-04-25T18:12:34.471+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:34.477+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-25T18:12:34.481+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-25T18:12:34.486+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:34.487+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-04-25T18:12:34.491+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-04-25T18:12:34.502+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:34.504+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-04-25T18:12:34.511+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-04-25T18:12:34.515+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-25T18:12:34.619+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-04-25T18:12:34.671+02:00  INFO 32651 --- [smartstock-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
